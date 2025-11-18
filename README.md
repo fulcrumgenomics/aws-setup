@@ -17,6 +17,9 @@ log into your new aws and issue the following command:
 
 ```bash
 
-curl --proto '=https' --tlsv1.2 -sSf https://github.com/fulcrumgenomics/ami-setup/go.sh | sh
+wget -qO- https://github.com/fulcrumgenomics/aws-setup/go.sh | sh
 
 ```
+
+After the installs, you need to restart your shell for everything to be available, so either call "bash"/"zsh" or disconnect and reconnect to the instance.
+
