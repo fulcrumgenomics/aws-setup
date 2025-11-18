@@ -3,8 +3,7 @@ a repo to develop a simple script that installs everything we need on a new AWS 
 
 This repo is here so that when you fire up a new AWS instance you'll have an easy time installing all the _extra_ little bits that make the rest of your work easy.
 
-For now this includes:
-
+This (currently) includes:
 - git
 - git-lfs
 - htop
@@ -17,7 +16,7 @@ log into your new aws and issue the following command:
 
 ```bash
 
-wget -qO- https://github.com/fulcrumgenomics/aws-setup/go.sh | sh
+wget -qO- https://raw.githubusercontent.com/fulcrumgenomics/aws-setup/refs/heads/main/go.sh | sh
 
 ```
 
