@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-set -xeuo pipefail
+set -euo pipefail
 
 #install git, htop
 sudo yum update -y
