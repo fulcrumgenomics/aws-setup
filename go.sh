@@ -14,17 +14,16 @@ wget -qO- https://pixi.sh/install.sh | sh
 
 if [ ! -f "~/.pixi/config.toml" ]; then
 	echo "copying default pixi.toml to ~/.pixi/ "
-	cp aws-setup/resources/pixi.defaults.toml  ~/.pixi/config.toml
+	cp aws-setup/resources/pixi.default.toml  ~/.pixi/config.toml
 else
 	echo "~/.pixi/config.toml already exists. NOT overwriting."
 fi 
+
+. ~/.bashrc
 
 # check that the default configuration is correct
 pixi config ls
 
 echo "Installing uv..."
 wget -qO- https://astral.sh/uv/install.sh | sh
-
-# tell the user to restart the shell
-echo '======== You need to restart the shell in order for pixi to be available ========'
 
