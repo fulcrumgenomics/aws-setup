@@ -1,7 +1,10 @@
+#!/usr/bin/env sh
 
+set -xeuo pipefail
 
 #install git, htop
-sudo apt-get install git-all htop
+sudo yum update -y
+sudo yum install git git-lfs htop -y 
 
 # install pixi
 wget -qO- https://pixi.sh/install.sh | sh
