@@ -7,7 +7,7 @@ sudo yum update -y
 sudo yum install git git-lfs htop -y 
 
 echo "Cloning repo..."
-git clone https://github.com/fulcrumgenomics/aws-setup.git
+git clone https://github.com/fulcrumgenomics/aws-setup.git --single-branch
 
 echo "Installing pixi..."
 wget -qO- https://pixi.sh/install.sh | sh
