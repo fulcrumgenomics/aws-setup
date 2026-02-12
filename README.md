@@ -22,3 +22,16 @@ wget -qO- https://raw.githubusercontent.com/fulcrumgenomics/aws-setup/refs/heads
 
 After the installs, you need to restart your shell for everything to be available, so either call "bash"/"zsh" or disconnect and reconnect to the instance.
 
+## Mounting an EBS volume
+
+If your instance has an attached (but unmounted) EBS volume, use `setup_volume.sh` to format, mount, and persist it via `/etc/fstab`:
+
+```bash
+# defaults to /mnt/data with ext4
+sudo -E bash setup_volume.sh
+
+# custom mount point and filesystem
+sudo -E bash setup_volume.sh /mnt/mydata xfs
+```
+
+The `-E` flag preserves `$USER` so ownership of the mount point gets set to your user rather than root.
