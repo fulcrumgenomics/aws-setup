@@ -4,7 +4,7 @@ set -euo pipefail
 
 #install git, htop
 sudo yum update -y
-sudo yum install git git-lfs htop gcc gcc-c++ -y
+sudo yum install git git-lfs htop gcc gcc-c++ docker -y
 
 echo "Cloning repo..."
 git clone https://github.com/fulcrumgenomics/aws-setup.git --single-branch
