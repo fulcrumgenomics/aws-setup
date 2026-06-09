@@ -4,7 +4,7 @@ set -euo pipefail
 
 #install git, htop
 sudo yum update -y
-sudo yum install git git-lfs htop -y 
+sudo yum install git git-lfs htop tree -y 
 
 echo "Cloning repo..."
 git clone https://github.com/fulcrumgenomics/aws-setup.git --single-branch
