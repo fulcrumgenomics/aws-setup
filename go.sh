@@ -19,7 +19,9 @@ else
 	echo "~/.pixi/config.toml already exists. NOT overwriting."
 fi 
 
+set +e 
 . ~/.bashrc
+set -e
 
 # check that the default configuration is correct
 pixi config ls
